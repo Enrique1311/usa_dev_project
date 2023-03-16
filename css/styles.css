@@ -1,0 +1,123 @@
+:root {
+	--primary: rgb(4, 4, 97);
+	--transparent_primary: rgba(4, 4, 97, 0.9);
+	--secondary: rgb(119, 193, 250);
+	--transparent_secondary: rgb(119, 193, 250, 0.9);
+	--dark-grey: rgb(34, 34, 54);
+	--transparent_dark-grey: rgb(34, 34, 54, 0.9);
+	--light-grey: rgb(153, 152, 152);
+	--white: rgb(255, 255, 255);
+	--my-red: rgb(252, 44, 3);
+	scroll-behavior: smooth;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "roboto", sans-serif;
+	background-color: var(--white);
+}
+
+.container {
+	margin-top: 70px;
+	padding: 30px;
+}
+
+/* Navbar ******************************************************/
+.navbar-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--primary);
+	padding: 10px 25px;
+	height: 70px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.navbar-logo img {
+	width: 50px;
+	cursor: pointer;
+}
+.navbar-links a {
+	text-decoration: none;
+	color: var(--light-grey);
+	font-weight: bold;
+	margin: 0 30px;
+	font-size: large;
+}
+.hamburguer-menu {
+	display: none;
+}
+.hamburguer-menu img {
+	width: 40px;
+	cursor: pointer;
+}
+.inactive {
+	display: none;
+}
+
+/* Home ****************************************************/
+.home-container {
+	background-image: url(../images/my-background.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 20px;
+	min-height: 80vh;
+	top: 70px;
+	padding: 70px 90px;
+}
+.home-container h1 {
+	background-color: var(--transparent_dark-grey);
+	padding: 30px 60px;
+	color: var(--white);
+}
+.home-texts {
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin-top: 40px;
+	text-align: left;
+}
+.main-text {
+	background-color: var(--transparent_primary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	color: var(--light-grey);
+	padding: 100px;
+}
+.secondary-text {
+	background-color: var(--transparent_secondary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--dark-grey);
+	width: 70%;
+	padding: 100px;
+}
+.home-texts span {
+	color: var(--primary);
+}
+
+/* Media Queries ******************************************/
+@media screen and (max-width: 700px) {
+	.navbar-links {
+		display: none;
+	}
+	.hamburguer-menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
