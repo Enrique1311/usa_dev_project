@@ -5,7 +5,7 @@
 	--transparent-light-blue: rgb(119, 193, 250, 0.6);
 	--dark-grey: rgb(34, 34, 54);
 	--transparent-dark-grey: rgb(34, 34, 54, 0.8);
-	--light-grey: rgb(153, 152, 152);
+	--light-grey: rgb(157, 157, 196);
 	--white: rgb(255, 255, 255);
 	--my-red: rgb(252, 44, 3);
 	scroll-behavior: smooth;
@@ -24,8 +24,25 @@ body {
 }
 
 .container {
-	margin-top: 4rem;
-	padding: 2rem;
+	padding: 2rem 4rem;
+}
+
+/*  Buttons ****************************************************/
+.my-btn {
+	margin-top: 1.5rem;
+	display: inline-block;
+	background-color: var(--blue);
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.2rem;
+	padding: 0.5rem 3rem;
+	color: var(--white);
+	border: solid 0.15rem var(--blue);
+}
+.my-btn:hover {
+	background-color: var(--transparent-light-blue);
+	color: var(--blue);
+	transition: 0.7s;
 }
 
 /* Navbar ******************************************************/
@@ -99,47 +116,127 @@ body {
 }
 .home-texts {
 	display: flex;
-	width: 70%;
+	width: 80%;
 	height: auto;
 	text-align: left;
 	z-index: 10;
 	padding: 2rem;
-	background-color: var(--transparent-light-blue);
+	background-color: var(--transparent-blue);
 	gap: 3rem;
-	border-radius: 0.2rem;
 }
 .home-texts span {
 	color: var(--blue);
 }
 .main-text {
-	background-color: var(--transparent-blue);
+	background-color: var(--light-blue);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--light-grey);
-	padding: 4rem;
-	font-size: 1.2rem;
-	border-radius: 0.2rem;
+	color: var(--dark-grey);
+	padding: 5rem 3rem;
+	font-size: 1.3rem;
 }
 .secondary-text {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: var(--dark-grey);
+	color: var(--light-grey);
 	width: 70%;
 	padding: 2rem 2rem 2rem 0;
 	font-size: 1.2rem;
 }
 .secondary-text span {
-	color: var(--transparent-blue);
-	font-size: 1.3rem;
+	color: var(--white);
+}
+
+/* About Us ******************************************************/
+.about-us {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.about-us > img {
+	margin: 2rem;
+	width: 40%;
+}
+.about-us-texts {
+	background-color: var(--light-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem;
+	font-size: 1.2rem;
+	width: 60%;
+	margin-left: 2rem;
+}
+.about-us-texts p {
+	color: var(--dark-grey);
+	text-align: center;
+}
+
+/* Services ******************************************/
+.services {
+	background: var(--white);
+	background-color: var(--light-grey);
+}
+.services h2 {
+	color: var(--blue);
+	text-align: center;
+}
+.article-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 3rem;
+	justify-content: space-around;
+	gap: 1rem;
+}
+.article {
+	width: 29%;
+	background-color: var(--blue);
+	margin-bottom: 1.5rem;
+	padding: 2rem;
+	text-align: center;
+	color: var(--white);
+}
+.article:hover {
+	background-color: var(--dark-grey);
+	box-shadow: 0 0 1rem 0 var(--dark-grey);
+	transition: 0.5s;
+	transform: scale(1.02);
+}
+.article > img {
+	width: 3rem;
+	height: auto;
+}
+.article h3 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+	color: var(--light-blue);
+}
+.article p {
+	margin-top: 1rem;
+	padding-bottom: 1.2rem;
 }
 
 /* Media Queries ******************************************/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
 	:root {
 		font-size: 16px;
 	}
+	/* Services */
+	.article {
+		width: 45%;
+		margin-bottom: 1.5rem;
+		padding: 2rem;
+	}
+}
+@media screen and (max-width: 900px) {
+	:root {
+		font-size: 14px;
+	}
+
+	/* Home */
 	.home-texts {
 		flex-direction: column;
 		width: 80%;
@@ -157,6 +254,8 @@ body {
 	:root {
 		font-size: 12px;
 	}
+
+	/* Navbar */
 	.navbar-links {
 		display: none;
 	}
@@ -164,5 +263,23 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	/* About us */
+	.about-us {
+		flex-direction: column-reverse;
+	}
+	.about-us > img {
+		margin: 0;
+		width: 80%;
+	}
+	.about-us-texts {
+		width: 90%;
+		margin-left: 0;
+	}
+
+	/* Services */
+	.article {
+		width: 90%;
 	}
 }
