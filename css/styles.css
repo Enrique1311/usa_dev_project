@@ -1,11 +1,11 @@
 :root {
-	--blue: rgb(4, 4, 97);
-	--transparent-blue: rgba(4, 4, 97, 0.6);
+	--blue: rgb(55, 55, 163);
+	--transparent-blue: rgba(55, 55, 163, 0.6);
 	--light-blue: rgb(119, 193, 250);
 	--transparent-light-blue: rgb(119, 193, 250, 0.6);
-	--dark-grey: rgb(34, 34, 54);
-	--transparent-dark-grey: rgb(34, 34, 54, 0.8);
-	--light-grey: rgb(157, 157, 196);
+	--dark-grey: rgb(72, 72, 103);
+	--transparent-dark-grey: rgb(72, 72, 103, 0.8);
+	--light-grey: rgb(218, 218, 245);
 	--white: rgb(255, 255, 255);
 	--my-red: rgb(252, 44, 3);
 	scroll-behavior: smooth;
@@ -27,7 +27,7 @@ body {
 	padding: 2rem 4rem;
 }
 
-/*  Buttons ****************************************************/
+/*  General Buttons ****************************************************/
 .my-btn {
 	margin-top: 1.5rem;
 	display: inline-block;
@@ -38,11 +38,36 @@ body {
 	padding: 0.5rem 3rem;
 	color: var(--white);
 	border: solid 0.15rem var(--blue);
+	border-radius: 0.5rem;
 }
 .my-btn:hover {
 	background-color: var(--transparent-light-blue);
 	color: var(--blue);
 	transition: 0.7s;
+}
+
+/* General Social Media ***************************************************/
+.social-media {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0.3rem;
+	margin: 1rem;
+	gap: 3rem;
+	z-index: 5;
+}
+.social-media img {
+	width: 3rem;
+	border: 0.1rem solid var(--light-blue);
+	transition: all ease-in-out 0.4s;
+	border-radius: 50%;
+	background-color: var(--light-blue);
+	opacity: 0.5;
+}
+.social-media img:hover {
+	transform: rotate(-360deg) scale(1.15);
+	border: none;
+	border: 0.1rem solid var(--light-blue);
+	opacity: 1;
 }
 
 /* Navbar ******************************************************/
@@ -68,6 +93,9 @@ body {
 	font-weight: bold;
 	margin-left: 2rem;
 	font-size: 1rem;
+}
+.navbar-links a:hover {
+	color: var(--light-blue);
 }
 .hamburguer-menu {
 	display: none;
@@ -123,6 +151,7 @@ body {
 	padding: 2rem;
 	background-color: var(--transparent-blue);
 	gap: 3rem;
+	border-radius: 0.5rem;
 }
 .home-texts span {
 	color: var(--blue);
@@ -135,6 +164,7 @@ body {
 	color: var(--dark-grey);
 	padding: 5rem 3rem;
 	font-size: 1.3rem;
+	border-radius: 0.5rem;
 }
 .secondary-text {
 	display: flex;
@@ -169,6 +199,7 @@ body {
 	font-size: 1.2rem;
 	width: 60%;
 	margin-left: 2rem;
+	border-radius: 0.5rem;
 }
 .about-us-texts p {
 	color: var(--dark-grey);
@@ -198,6 +229,7 @@ body {
 	padding: 2rem;
 	text-align: center;
 	color: var(--white);
+	border-radius: 0.5rem;
 }
 .article:hover {
 	background-color: var(--dark-grey);
@@ -219,12 +251,105 @@ body {
 	padding-bottom: 1.2rem;
 }
 
+/*Products**********************************************/
+.products {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: var(--white);
+}
+.prod-box {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.prod-box h4 {
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+	background: var(--dark-grey);
+	width: 100%;
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
+	margin: 1rem;
+	color: var(--light-blue);
+	gap: 1rem;
+}
+.prod-box img {
+	width: 4rem;
+}
+.products > img {
+	width: 40%;
+	height: min-content;
+}
+
+/*Footer**************************************************************/
+footer {
+	background: var(--dark-grey);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	gap: 0.6rem;
+}
+.container .title {
+	color: var(--light-blue);
+}
+.contacts-content {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+}
+.my-form {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--blue);
+	border-radius: 1rem;
+	overflow: hidden;
+	min-width: 20rem;
+	width: 50%;
+	padding: 3rem 2rem;
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+}
+.my-form input {
+	border-radius: 0.5rem;
+	border: solid 0.1rem;
+	border-color: var(--white);
+	background-color: var(--blue);
+	color: var(--white);
+	font-size: 1rem;
+	padding: 0.7rem;
+	width: 100%;
+	margin: 0.5rem 0;
+}
+.my-form label {
+	color: var(--white);
+}
+.footer-part {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.footer-part .logo {
+	width: 70%;
+}
+.footer-part h3 {
+	color: var(--light-blue);
+	margin: 1rem;
+}
+
 /* Media Queries ******************************************/
 @media screen and (max-width: 1200px) {
 	:root {
 		font-size: 16px;
 	}
-	/* Services */
+	/* Services ***********************/
 	.article {
 		width: 45%;
 		margin-bottom: 1.5rem;
@@ -236,7 +361,7 @@ body {
 		font-size: 14px;
 	}
 
-	/* Home */
+	/* Home ****************************/
 	.home-texts {
 		flex-direction: column;
 		width: 80%;
@@ -248,6 +373,20 @@ body {
 		width: 100%;
 		padding: 0rem 2rem 2rem 2rem;
 	}
+	/* Products *************************/
+	.products {
+		flex-direction: column;
+		align-items: center;
+	}
+	.prod-box {
+		width: 100%;
+	}
+	.prod-box h4 {
+		padding: 0.5rem 0 0.5rem 1.5rem;
+	}
+	.products > img {
+		width: 80%;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -255,7 +394,7 @@ body {
 		font-size: 12px;
 	}
 
-	/* Navbar */
+	/* Navbar *************************/
 	.navbar-links {
 		display: none;
 	}
@@ -265,7 +404,7 @@ body {
 		align-items: center;
 	}
 
-	/* About us */
+	/* About us *************************/
 	.about-us {
 		flex-direction: column-reverse;
 	}
@@ -278,7 +417,7 @@ body {
 		margin-left: 0;
 	}
 
-	/* Services */
+	/* Services *************************/
 	.article {
 		width: 90%;
 	}
