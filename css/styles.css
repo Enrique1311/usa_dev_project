@@ -29,8 +29,9 @@ body {
 
 .sections-title {
 	margin: 1rem 0 2rem 0;
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	text-align: center;
+	font-weight: bold;
 }
 
 .sections-subtitle {
@@ -38,7 +39,7 @@ body {
 }
 
 .sections-paragraph {
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 /* General Buttons ****************************************************/
@@ -48,11 +49,11 @@ body {
 	background-color: var(--blue);
 	text-align: center;
 	text-decoration: none;
-	font-size: 1.2rem;
 	padding: 0.5rem 3rem;
 	color: var(--white);
 	border: solid 0.15rem var(--white);
 	border-radius: 0.5rem;
+	font-size: 1rem;
 }
 .my-btn:hover {
 	background-color: var(--light-blue);
@@ -116,7 +117,6 @@ nav {
 	text-decoration: none;
 	color: var(--light-grey);
 	font-weight: bold;
-	font-size: 1.2rem;
 }
 .navbar-links a:hover {
 	color: var(--light-blue);
@@ -154,10 +154,10 @@ nav {
 }
 .home-title {
 	z-index: 10;
-	color: var(--light-blue);
+	color: var(--white);
 }
 .home-title span {
-	color: var(--white);
+	color: var(--light-blue);
 	font-size: 2.5rem;
 }
 .home-container-opacity {
@@ -180,6 +180,7 @@ nav {
 }
 .home-texts span {
 	color: var(--blue);
+	font-weight: bold;
 }
 .main-text {
 	background-color: var(--light-blue);
@@ -188,7 +189,6 @@ nav {
 	align-items: center;
 	color: var(--dark-grey);
 	padding: 5rem 3rem;
-	font-size: 1.3rem;
 	border-radius: 0.5rem;
 }
 .secondary-text {
@@ -201,7 +201,7 @@ nav {
 	font-size: 1.2rem;
 }
 .secondary-text span {
-	color: var(--white);
+	color: var(--light-blue);
 }
 
 /* About Us ******************************************************/
@@ -295,7 +295,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 }
-.prod-box h5 {
+.prod-box p {
 	display: flex;
 	align-items: center;
 	background: var(--dark-grey);
@@ -317,13 +317,13 @@ nav {
 
 /*Footer**************************************************************/
 footer {
-	background: var(--dark-grey);
+	background: var(--blue);
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	gap: 0.6rem;
+	gap: 1rem;
 }
 .contacts-title {
 	color: var(--light-blue);
@@ -344,10 +344,13 @@ footer {
 	overflow: hidden;
 	min-width: 20rem;
 	width: 40%;
-	padding: 3rem 2rem;
-	gap: 1rem;
-	margin-bottom: 2rem;
+	padding: 1rem;
+	gap: 0.6rem;
 	text-decoration: none;
+}
+.my-form h4 {
+	color: var(--light-grey);
+	text-align: center;
 }
 .my-form input,
 textarea {
@@ -363,6 +366,7 @@ textarea {
 }
 .my-form label {
 	color: var(--white);
+	font-size: 0.7rem;
 }
 .submit-button {
 	align-self: center;
@@ -458,6 +462,10 @@ textarea {
 		box-shadow: 0 0 1rem 0;
 		animation: openMenuEfect 1s linear;
 	}
+	.navbar-links a:hover {
+		background-color: var(--dark-grey);
+	}
+
 	@keyframes openMenuEfect {
 		0% {
 			right: -120%;
