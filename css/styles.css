@@ -168,7 +168,7 @@ nav {
 }
 .home-texts {
 	display: flex;
-	width: 80%;
+	width: 70%;
 	height: auto;
 	text-align: left;
 	z-index: 10;
@@ -187,15 +187,15 @@ nav {
 	justify-content: center;
 	align-items: center;
 	color: var(--dark-grey);
-	padding: 5rem 3rem;
+	padding: 3rem;
 	border-radius: 0.5rem;
+	width: min-content;
 }
 .secondary-text {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: var(--light-grey);
-	width: 70%;
 	padding: 2rem 2rem 2rem 0;
 	font-size: 1.2rem;
 }
@@ -413,11 +413,12 @@ textarea {
 		width: 80%;
 	}
 	.main-text {
-		padding: 3rem;
+		width: 100%;
 	}
 	.secondary-text {
 		width: 100%;
-		padding: 0rem 2rem 2rem 2rem;
+		padding: 0rem;
+		padding-bottom: 1rem;
 	}
 	/* Products *************************/
 	.products {
@@ -491,7 +492,7 @@ textarea {
 		padding: 4rem 2rem;
 	}
 	.home-texts {
-		width: 100%;
+		width: 80%;
 	}
 	/* About us *************************/
 	.about-us {
@@ -521,6 +522,11 @@ textarea {
 }
 
 @media screen and (max-width: 450px) {
+	/* Home ******************************** */
+	.home-texts {
+		width: 100%;
+	}
+	/* About us****************************** */
 	.about-us > img {
 		width: 100%;
 	}
